@@ -23,7 +23,7 @@ namespace Sdatcc.Api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var dados = _myDbContext.Alunos;
+            var dados = _myDbContext.Alunos.ToList();
 
             return Ok(dados);
         }
